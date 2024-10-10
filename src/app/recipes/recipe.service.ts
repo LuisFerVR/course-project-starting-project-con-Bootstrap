@@ -22,7 +22,7 @@ export class RecipeService {
         new Recipe(
             'A Test Recipe',
             'This is simply a test',
-            'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&resize=556,505',
+            'https://lh6.googleusercontent.com/proxy/SpZb_8ODOaZSM1ds0FPEiYMFBQbBBAiIOq9JinO0UEJ-KMs1xXstQFuOSekRwoAfKgkNWE0sEdBQEBktVYB3-7EOWNlwDqkOpg2XBAYU92n_PMgmv0yfu8Xo0VEv4pcSkHmUTbEc',
             [
                 new Ingredient('Meat', 1),
                 new Ingredient('Buns', 2)
@@ -32,6 +32,10 @@ export class RecipeService {
 
     getRecipes(){
         return this.recipes.slice();
+    }
+
+    getRecipe(index: number){
+        return this.recipes[index];
     }
 
     addIngredientsToShoppingList(ingredients: Ingredient[]){
